@@ -2,13 +2,15 @@ import { useState } from 'react'
 import './App.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import Home from './pages/Home'
 
 function App() {
 
   return (
-    <div class="bg-indigo-500">
+    <div>
 
       <Nav/>
+      <Home/>
       <Footer/>
 
     </div>
