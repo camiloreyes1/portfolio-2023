@@ -10,3 +10,46 @@
     /* padding-top: 0vh; */
     padding-bottom: 30vh;
   }
+
+  .techSkills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vh;
+    max-width: 110vh;
+    width: 100%;
+  }
+
+  .skillImg {
+    width: 10vh;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1vh;
+  }
+
+  .skillName {
+    font-size: 2vh;
+  }
+
+  .skillCard {
+    background-color: rgb(255, 255, 255);
+    padding: 2vh;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(101, 99, 99, 0.95);
+    width: 25vh;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #000000e6;
+  }
+
+
+
+  .card {
+    text-align: center;
+    width: 22vh;
+    height: 154px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  

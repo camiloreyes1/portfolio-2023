@@ -29,24 +29,21 @@ const Home = () => {
 
             </div>
 
-            <div className="container mx-4 px-5 py-20 items-center flex-wrap">
+            <div className="container mx-4 px-5 py-5 flex-wrap">
 
-                <h1 class=" text-center	mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">My Skills</h1>
-
-
-
-            </div>
-                <div className="mySkills">
+                <h1 class="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">My Skills</h1>
+                
+                <br></br>
+                <div className="techSkills">
                     {skillsPics.map((skill, index) => (
-
-                        <div key={index}> 
-                            <img src={skill.imageSrc} alt={`${skill.name} Logo`} class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                            </img>
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{skill.name}</h5>
+                        <div key={index} className='skillCard'>
+                            <img src={skill.imageSrc} alt={`${skill.name} Logo`} className='skillImg' />
+                            <h3 className='skillName'>{skill.name}</h3>
                         </div>
                     ))}
-
                 </div>
+
+            </div>
         </div>
     )
 }
