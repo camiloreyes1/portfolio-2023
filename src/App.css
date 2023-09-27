@@ -1,0 +1,12 @@
+.mySkills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("./assets/images/p5.png") ;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* padding-top: 0vh; */
+    padding-bottom: 30vh;
+  }
