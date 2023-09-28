@@ -34,13 +34,15 @@ const Home = () => {
                 <h1 class="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">My Skills</h1>
                 
                 <br></br>
-                <div className="techSkills">
-                    {skillsPics.map((skill, index) => (
-                        <div key={index} className='skillCard'>
-                            <img src={skill.imageSrc} alt={`${skill.name} Logo`} className='skillImg' />
-                            <h3 className='skillName'>{skill.name}</h3>
-                        </div>
-                    ))}
+                <div className="flex justify-center">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        {skillsPics.map((skill, index) => (
+                            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 text-center">
+                                <img src={skill.imageSrc} alt={`${skill.name} Logo`} className="mx-auto h-16" />
+                                <h3 className="mt-2 text-lg font-semibold text-gray-800 dark:text-gray-200">{skill.name}</h3>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
             </div>
