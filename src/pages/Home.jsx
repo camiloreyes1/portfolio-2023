@@ -1,3 +1,5 @@
+import Projects from "./Projects";
+
 const Home = () => {
 
     const skillsPics = [
@@ -14,6 +16,7 @@ const Home = () => {
         { name: 'Cloudinary', imageSrc: 'https://res.cloudinary.com/delscyuhi/image/upload/t_cloud/pbretokp8mgrcgksud77.jpg' },
         { name: 'Postman', imageSrc: 'https://res.cloudinary.com/delscyuhi/image/upload/v1695841267/brhm6p9xi9uhiot322ps.png' },
         { name: 'Visual Studio', imageSrc: 'https://res.cloudinary.com/delscyuhi/image/upload/v1695841267/mol0qcv8nguoiuhyiq6q.jpg' },
+        { name: 'Bootstrap', imageSrc: 'https://res.cloudinary.com/delscyuhi/image/upload/t_bootstrap/vbo0ncppqoapuwcn1jr6.jpg' },
 
     ];
 
@@ -44,8 +47,9 @@ const Home = () => {
                         ))}
                     </div>
                 </div>
-
+            <br></br>
             </div>
+            <Projects/>
         </div>
     )
 }
