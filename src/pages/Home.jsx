@@ -1,4 +1,4 @@
-import Projects from "./Projects";
+import { motion } from 'framer-motion';
 
 const Home = () => {
 
@@ -21,38 +21,69 @@ const Home = () => {
 
     ];
 
+    const cardVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      };
+
+      const textVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      };
+
     return (
         <div>
-            <div className="container mx-4 px-5 py-20 items-center flex-wrap">
-            <br></br>
-
-                <h1 class=" text-center	mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Welcome!</h1>
-                <p class=" mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Hi! my name is Juan Reyes, as a Full Stack Developer, I've had the privilege of working on a diverse range of projects, from creating interactive web applications to building robust backend systems. My dedication to mastering both frontend and backend technologies enables me to bring comprehensive solutions to life.
-
-                    <br /><br></br>
-                    In this portfolio, you'll find examples of my coding problem-solving abilities, and a commitment to clean, efficient, and scalable code. Whether you're an employer seeking a capable developer or a fellow enthusiast of the tech world, I invite you to explore my projects and get to know my capabilities.</p>
-
-            </div>
-
-            <div className="container mx-4 px-5 py-5 flex-wrap">
-
-                <h1 class="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">My Skills</h1>
-                
-                <br></br>
-                <div className="flex justify-center">
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                        {skillsPics.map((skill, index) => (
-                            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 text-center">
-                                <img src={skill.imageSrc} alt={`${skill.name} Logo`} className="mx-auto h-16" />
-                                <h3 className="mt-2 text-lg font-semibold text-gray-800 dark:text-gray-200">{skill.name}</h3>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            <br></br>
-            </div>
-            <Projects/>
+        <div className="container mx-4 px-5 py-20 items-center flex-wrap">
+          <motion.h1
+            className="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+          >
+            Welcome!
+          </motion.h1>
+          <motion.p
+            className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
+            initial="hidden"
+            animate="visible"
+            variants={textVariants}
+          >
+            Hi! my name is Juan Reyes, as a Full Stack Developer, I've had the privilege of working on a diverse range of projects, from creating interactive web applications to building robust backend systems. My dedication to mastering both frontend and backend technologies enables me to bring comprehensive solutions to life.
+            <br /><br />
+            In this portfolio, you'll find examples of my coding problem-solving abilities, and a commitment to clean, efficient, and scalable code. Whether you're an employer seeking a capable developer or a fellow enthusiast of the tech world, I invite you to explore my projects and get to know my capabilities.
+          </motion.p>
         </div>
+  
+        <div className="container mx-4 px-5 py-5 flex-wrap">
+          <motion.h1
+            className="text-center mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+          >
+            My Skills
+          </motion.h1>
+          <br />
+          <div className="flex justify-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {skillsPics.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 text-center"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate="visible"
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <img src={skill.imageSrc} alt={`${skill.name} Logo`} className="mx-auto h-16" />
+                  <h3 className="mt-2 text-lg font-semibold text-gray-800 dark:text-gray-200">{skill.name}</h3>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          <br />
+        </div>
+      </div>
     )
 }
 

@@ -12,6 +12,7 @@ function App() {
 
       <Nav/>
       <Home/>
+      <Projects/>
       <Footer/>
 
     </div>
